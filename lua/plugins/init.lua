@@ -1,0 +1,12 @@
+require("lazy").setup({
+    require("plugins.colorscheme"),
+    require("plugins.autopairs"),
+    require("plugins.nvim-tree"),
+    require("plugins.telescope"),
+    require("plugins.treesitter"),
+    require("plugins.toggleterm"),
+    require("plugins.lsp"),
+    require("plugins.jdtls"),
+    require("plugins.cmp"),
+    require("plugins.render-markdown")
+})
