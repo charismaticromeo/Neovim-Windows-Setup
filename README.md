@@ -166,7 +166,6 @@ ___
 
 Language        Features
 
----
 Lua             LSP, completion, formatting
 Python          Pyright, completion, formatting
 Java            jdtls, completion, diagnostics
