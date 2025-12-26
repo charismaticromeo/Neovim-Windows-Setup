@@ -15,10 +15,7 @@ A modern **Neovim configuration for Windows**, focused on developer productivity
 
 This repository exists so I never have to rebuild my Neovim setup from scratch again.
 
----
-
 ## Repository Structure
-
 ```text
 nvim/
 ├── init.lua
@@ -55,8 +52,6 @@ nvim/
 │ 
 └── LICENSE
 ```
-
----
 ## Requirements / Prerequisites
 
 ### 1. Neovim
@@ -81,8 +76,8 @@ Required for plugin installation.
 git --version
 ```
 
-### 3. Language Runtimes & Tooling
-3.1. Python
+## Language Runtimes & Tooling
+### 1. Python
 
 Python 3.10+
 
@@ -94,7 +89,7 @@ python --version
 pip --version
 ```
 
-3.2. Java
+### 2. Java
 
 JDK 17 or newer
 
@@ -106,13 +101,13 @@ java --version
 echo $env:JAVA_HOME
 ```
 
-3.3. C / C++
+### 3. C / C++
 
 clangd (installed via Mason)
 
 OR Visual Studio Build Tools
 
-### 4. Recommended Tools
+## Recommended Tools
 
 ripgrep (Telescope live grep)
 
@@ -123,8 +118,6 @@ fd (faster file search)
 rg --version
 fd --version
 ```
----
-
 ## Installation & Setup
 
 ### 1. Clone the repository
@@ -136,9 +129,9 @@ git clone https://github.com/charismaticromeo/Neovim-Windows-Setup.git $env:LOCA
 
 This places the config where Neovim expects it on Windows.
 
-___
-### 2. Launch Neovim
 
+### 2. Launch Neovim
+ 
 ```powershell
 
 nvim
@@ -151,8 +144,7 @@ Lazy.nvim will:
 
 > [!NOTE] First launch may take a minute.
 
-___
-### 3. LSP Setup
+## LSP Setup
 
 Mason automatically installs:
 - lua_ls
@@ -161,51 +153,54 @@ Mason automatically installs:
 
 Java (jdtls) starts automatically when opening .java files inside a project directory.
 
-___
 ### 4. Language Support
 
-Language        Features
+| Language          | Features                          |
+| ----------------- | --------------------------------- |
+| Lua               | LSP, completion, formatting       |
+| Python            | Pyright, completion, formatting   |
+| Java              | jdtls, completion, diagnostics    |
+| C                 | clangd, completion                |
+| C++               | clangd, completion                |
+| Markdown          | Rendered preview, callouts, icons |
+---------------------------------------------------------
 
-Lua             LSP, completion, formatting
-Python          Pyright, completion, formatting
-Java            jdtls, completion, diagnostics
-C               clangd, completion
-C++             clangd, completion
-Markdown        Rendered preview, callouts, icons
-
-___
 ### 5. Keybindigs
 
 Leader key: <Space>
 
-> [!TIP] File Explorer
+> File Explorer
 
-Key	        Action
-<leader>e	Toggle nvim-tree
+| Key           | Action
+| ------------- | ------------
+| \<leader>e	| Toggle nvim-tree
 
-> [!TIP] Telescope
+> Telescope
 
-Key	        Action
-<leader>ff	Find files
-<leader>fg	Live grep
-<leader>fb	Buffers
-<leader>fh	Help tags
+| Key           | Action
+| ------------- | ------------
+| \<leader>ff	| Find files
+| \<leader>fg	| Live grep
+| \<leader>fb	| Buffers
+| \<leader>fh	| Help tags
 
-> [!TIP] Terminal
+> Terminal
 
-Key	        Action
-<leader>tt	Toggle terminal
+| Key           | Action
+| ------------- | -------------
+| \<leader>tt	| Toggle terminal
 
-> [!TIP] LSP
+> LSP
 
-*Key	        Action*
-gd	        Go to definition
-K	        Hover documentation
-<leader>rn	Rename
-<leader>ca	Code action
+| Key           | Action
+| ------------- | -----------------
+| gd	        | Go to definition
+| K	            | Hover documentation
+| \<leader>rn	| Rename
+| \<leader>ca	| Code action
 
-___
-### 6. Features
+
+## Features
 
 - Auto-format on save (when supported by LSP)
 - Tab-based completion (not Enter)
@@ -219,10 +214,10 @@ ___
     - .venv
     - dist
 
-___
-### 7. Troubleshooting
 
-> [!WARNING] Java completion not working?
+## Troubleshooting
+
+> Java completion not working?
 - Ensure file is inside a project folder
 - Ensure JDK 17+
 - Check active LSPs:
@@ -232,7 +227,7 @@ ___
 :LspInfo
 ```
 
-> [!WARNING] Telescope Treesitter errors?
+> Telescope Treesitter errors?
 Install  missing parsers:
 
 ```vim
@@ -240,15 +235,15 @@ Install  missing parsers:
 :TSInstall lua python java c cpp
 ```
 
-> [!WARNING] Deprecated API warnings?
+> Deprecated API warnings?
 
 ```vim
 
 :checkhealth vim.deprecated
 ```
 
-___
-### 8. Credits
+
+## Credits
 
 - Neovim core team
 - Lazy.nvim
@@ -257,10 +252,8 @@ ___
 - Treesitter
 - Telescope.nvim
 
-___
-### 9. LICENSE
+
+## LICENSE
 
 This project is licensed under the MIT License.
 See the LICENSE file for details.
-
-
