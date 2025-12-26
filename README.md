@@ -123,3 +123,145 @@ fd (faster file search)
 rg --version
 fd --version
 ```
+---
+
+## Installation & Setup
+
+### 1. Clone the repository
+
+```powershell
+
+git clone https://github.com/charismaticromeo/Neovim-Windows-Setup.git $env:LOCALAPPDATA\nvim
+```
+
+This places the config where Neovim expects it on Windows.
+
+___
+### 2. Launch Neovim
+
+```powershell
+
+nvim
+```
+
+Lazy.nvim will:
+- Install itself
+- Install all plugins
+- Compile the plugin cache
+
+> [!NOTE] First launch may take a minute.
+
+___
+### 3. LSP Setup
+
+Mason automatically installs:
+- lua_ls
+- pyright
+- clangd
+
+Java (jdtls) starts automatically when opening .java files inside a project directory.
+
+___
+### 4. Language Support
+
+Language        Features
+
+---
+Lua             LSP, completion, formatting
+Python          Pyright, completion, formatting
+Java            jdtls, completion, diagnostics
+C               clangd, completion
+C++             clangd, completion
+Markdown        Rendered preview, callouts, icons
+
+___
+### 5. Keybindigs
+
+Leader key: <Space>
+
+> [!TIP] File Explorer
+
+Key	        Action
+<leader>e	Toggle nvim-tree
+
+> [!TIP] Telescope
+
+Key	        Action
+<leader>ff	Find files
+<leader>fg	Live grep
+<leader>fb	Buffers
+<leader>fh	Help tags
+
+> [!TIP] Terminal
+
+Key	        Action
+<leader>tt	Toggle terminal
+
+> [!TIP] LSP
+
+*Key	        Action*
+gd	        Go to definition
+K	        Hover documentation
+<leader>rn	Rename
+<leader>ca	Code action
+
+___
+### 6. Features
+
+- Auto-format on save (when supported by LSP)
+- Tab-based completion (not Enter)
+- Auto-closing brackets and quotes
+- Treesitter-powered syntax highlighting
+- Git-aware file tree
+- Ignored directories:
+    - .git
+    - node_modules
+    - .env
+    - .venv
+    - dist
+
+___
+### 7. Troubleshooting
+
+> [!WARNING] Java completion not working?
+- Ensure file is inside a project folder
+- Ensure JDK 17+
+- Check active LSPs:
+
+```vim
+
+:LspInfo
+```
+
+> [!WARNING] Telescope Treesitter errors?
+Install  missing parsers:
+
+```vim
+
+:TSInstall lua python java c cpp
+```
+
+> [!WARNING] Deprecated API warnings?
+
+```vim
+
+:checkhealth vim.deprecated
+```
+
+___
+### 8. Credits
+
+- Neovim core team
+- Lazy.nvim
+- nvim-lspconfig
+- Mason.nvim
+- Treesitter
+- Telescope.nvim
+
+___
+### 9. LICENSE
+
+This project is licensed under the MIT License.
+See the LICENSE file for details.
+
+
