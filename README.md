@@ -15,7 +15,8 @@ A modern **Neovim configuration for Windows**, focused on developer productivity
 
 This repository exists so I never have to rebuild my Neovim setup from scratch again.
 
-** Watch this demo to get a snip of the Neovim with my config in action:**
+**Watch this demo to get a snip of the Neovim with my config in action:**
+
 https://github.com/charismaticromeo/Neovim-Windows-Setup/blob/main/assets/mod-wc-gif1228.mp4
 
 ## Repository Structure
