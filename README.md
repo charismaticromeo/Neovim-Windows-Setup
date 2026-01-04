@@ -17,7 +17,9 @@ This repository exists so I never have to rebuild my Neovim setup from scratch a
 
 **Watch this demo to get a snip of the Neovim with my config in action:**
 
-https://github.com/charismaticromeo/Neovim-Windows-Setup/blob/main/assets/mod-wc-gif1228.mp4
+
+https://github.com/user-attachments/assets/1b43c095-a5fc-4501-bf92-d3d726e1dc37
+
 
 ## Repository Structure
 ```text
