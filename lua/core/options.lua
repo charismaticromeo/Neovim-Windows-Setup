@@ -10,7 +10,7 @@ vim.opt.mouse = "a"
 vim.opt.filetype = "on"
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 vim.opt.shortmess:append("c")
-vim.o.shell = "powershell"
+vim.o.shell = "pwsh"
 vim.o.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command"
 vim.o.shellredir = "2>&1 | Out-File -Encoding UTF8 %s"
 vim.o.shellpipe = "2>&1 | Out-File -Encoding UTF8 %s"
