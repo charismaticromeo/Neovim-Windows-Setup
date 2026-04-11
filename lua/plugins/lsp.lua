@@ -19,6 +19,10 @@ return {
 
         -- Per-server overrides
         local server_configs = {
+            bashls = {
+                filetypes = { "sh", "bash", "" }
+            },
+
             lua_ls = {
                 settings = {
                     Lua = {

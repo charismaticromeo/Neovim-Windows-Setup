@@ -4,22 +4,22 @@ local keymap = vim.keymap.set
 -- Telescope (fuzzy finder)
 -- ===============================
 keymap("n", "<leader>ff", function()
-    require("telescope.builtin").find_files()
+  require("telescope.builtin").find_files()
 end
 )
 
 keymap("n", "<leader>fg", function()
-    require("telescope.builtin").live_grep()
+  require("telescope.builtin").live_grep()
 end
 )
 
 keymap("n", "<leader>fb", function()
-    require("telescope.builtin").buffers()
+  require("telescope.builtin").buffers()
 end
 )
 
 keymap("n", "<leader>fh", function()
-    require("telescope.builtin").hash_tags()
+  require("telescope.builtin").hash_tags()
 end
 )
 
@@ -56,9 +56,11 @@ keymap("n", "K", ":lua vim.lsp.buf.hover()<CR>")
 -- Toggle terminal (toggle floating terminal)
 -- ===============================
 
-vim.keymap.set("n", "<leader>tt", "<cmd>ToggleTerm<cr>", { desc = "Toggle terminal" })
-vim.keymap.set("n", "<leader>tf", "<cmd>ToggleTerm direction=float<cr>", { desc = "Floating terminal" })
-vim.keymap.set("n", "<leader>tv", "<cmd>ToggleTerm direction=vertical size=47<cr>", { desc = "Vertical terminal" })
+keymap("n", "<leader>tt", "<cmd>ToggleTerm name='Black Pearl' size=8<cr>", { desc = "Toggle terminal" })
+keymap("n", "<leader>tf", "<cmd>ToggleTerm direction=float size=45 name='Black Pearl'<cr>",
+  { desc = "Floating terminal" })
+keymap("n", "<leader>tv", "<cmd>ToggleTerm direction=vertical size=47 name='Black Pearl'<cr>",
+  { desc = "Vertical terminal" })
 
 -- Escape terminal mode easily
 keymap("t", "<Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
@@ -73,3 +75,6 @@ keymap("t", "<C-l>", [[<Cmd>wincmd l<CR>]])
 -- Markdown preview toggle (if you use glow or render-markdown)
 -- ===============================
 keymap("n", "<leader>mp", ":Glow<CR>")
+
+-- Tagbar to map functions activated using F8.
+keymap("n", "<F8>", ":TagbarToggle<CR>", { noremap = true, silent = true })

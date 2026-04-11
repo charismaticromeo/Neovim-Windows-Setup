@@ -3,8 +3,11 @@ return {
     tag = "0.1.5",
     dependencies = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons" },
     config = function()
-        require("telescope").setup{
+        require("telescope").setup {
             defaults = {
+                preview = {
+                    treesitter = false,
+                },
                 -- Ignore common folders/files
                 file_ignore_patterns = {
                     ".git/",

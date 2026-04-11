@@ -3,7 +3,8 @@ return {
     version = "*",
     config = function()
         require("toggleterm").setup({
-            size = 15,
+            name = "Black Pearl",
+            size = 8,
             open_mapping = nil, -- disabling default mappings
             hide_numbers = true,
             shade_filetypes = {},
