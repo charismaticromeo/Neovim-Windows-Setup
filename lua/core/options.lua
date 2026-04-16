@@ -13,3 +13,12 @@ vim.opt.mouse = "a"
 vim.opt.filetype = "on"
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 vim.opt.shortmess:append("c")
+
+-- Set dynamic textwidth to 80% of the current window width
+vim.api.nvim_create_autocmd({ "VimResized", "WinEnter", "BufWinEnter" }, {
+  callback = function()
+    local width = vim.fn.float2nr(vim.fn.winwidth(0) * 0.8)
+    vim.opt_local.textwidth = math.max(width, 40)
+    vim.opt_local.colorcolumn = "+0"
+  end
+})
