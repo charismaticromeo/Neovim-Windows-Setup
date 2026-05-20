@@ -56,9 +56,9 @@ keymap("n", "K", ":lua vim.lsp.buf.hover()<CR>")
 -- Toggle terminal (toggle floating terminal)
 -- ===============================
 
-vim.keymap.set("n", "<leader>tt", "<cmd>ToggleTerm<cr>", { desc = "Toggle terminal" })
-vim.keymap.set("n", "<leader>tf", "<cmd>ToggleTerm direction=float<cr>", { desc = "Floating terminal" })
-vim.keymap.set("n", "<leader>tv", "<cmd>ToggleTerm direction=vertical size=47<cr>", { desc = "Vertical terminal" })
+keymap("n", "<leader>tt", "<cmd>ToggleTerm<cr>", { desc = "Toggle terminal" })
+keymap("n", "<leader>tf", "<cmd>ToggleTerm direction=float<cr>", { desc = "Floating terminal" })
+keymap("n", "<leader>tv", "<cmd>ToggleTerm direction=vertical size=47<cr>", { desc = "Vertical terminal" })
 
 -- Escape terminal mode easily
 keymap("t", "<Esc>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
