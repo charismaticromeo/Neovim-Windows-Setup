@@ -9,5 +9,6 @@ require("lazy").setup({
     require("plugins.jdtls"),
     require("plugins.cmp"),
     require("plugins.render-markdown"),
+    require("plugins.tagbar"),
     -- require("plugins.smear_cursor")
 })

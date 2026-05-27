@@ -51,6 +51,8 @@ keymap("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>")
 keymap("n", "gd", ":lua vim.lsp.buf.definition()<CR>")
 keymap("n", "gr", ":lua vim.lsp.buf.references()<CR>")
 keymap("n", "K", ":lua vim.lsp.buf.hover()<CR>")
+keymap("n", "gk", ":lua vim.diagnostic.open_float()<CR>", { desc = "Open floating diagnostic message" }) 
+keymap("n", "gl", ":lua vim.diagnostic.setqflist()<CR>", { desc = "Open a diagnostic message panel at the bottom" }) 
 
 -- ===============================
 -- Toggle terminal (toggle floating terminal)
@@ -73,3 +75,4 @@ keymap("t", "<C-l>", [[<Cmd>wincmd l<CR>]])
 -- Markdown preview toggle (if you use glow or render-markdown)
 -- ===============================
 keymap("n", "<leader>mp", ":Glow<CR>")
+
