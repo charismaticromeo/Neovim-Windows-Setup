@@ -50,6 +50,8 @@ keymap("n", "<leader>rn", ":lua vim.lsp.buf.rename()<CR>")
 keymap("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>")
 keymap("n", "gd", ":lua vim.lsp.buf.definition()<CR>")
 keymap("n", "gr", ":lua vim.lsp.buf.references()<CR>")
+keymap("n", "gk", ":lua vim.diagnostic.open_float()<CR>", { desc = "Open floating diagnostic message" })
+keymap("n", "gl", ":lua vim.diagnostic.setqflist()<CR>", { desc = "Open pane diagnostic panel" })
 keymap("n", "K", ":lua vim.lsp.buf.hover()<CR>")
 
 -- ===============================
