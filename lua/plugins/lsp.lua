@@ -7,7 +7,7 @@ return {
   config = function()
     require("mason").setup()
     require("mason-lspconfig").setup({
-      ensure_installed = { "lua_ls", "pyright", "clangd", "jdtls", "gopls" },
+      ensure_installed = { "lua_ls", "pyright", "clangd", "jdtls", "gopls", "asm_lsp" },
     })
 
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -61,10 +61,14 @@ return {
           },
         },
       },
+
+      asm_lsp = {
+        filetypes = { "asm", "vmasm", "s", "S" },
+      },
     }
 
     -- servers to enable
-    local servers = { "pyright", "lua_ls", "clangd", "gopls" }
+    local servers = { "pyright", "lua_ls", "clangd", "gopls", "asm_lsp" }
 
     for _, server in ipairs(servers) do
       vim.lsp.config(
